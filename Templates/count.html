@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>COUNT</title>
+    </head>
+    <body>
+        <h1>COUNT</h1>
+        <h2>There are a total of {{totalCount}} word(s) in the text</h2>
+        <a href="{% url 'home' %}">Start Again</a>
+        
+        <h3>Full text entry:</h3>
+        {{ fulltext }}
+        
+        <h1>Word Count</h1>
+        
+        {% for word, countIndicator in sortedWords %}
+        
+        {{ word }} - {{ countIndicator }}
+        <br/>
+        
+        
+        {% endfor %}
+        
+        {{ wordDict }}
+        
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>HOME PAGE</title>
+    </head>
+    <body>
+        <h1>This is derived from the home.html file </h1>
+        {{HiThere}}
+        <script type="application/x-javascript">
+            document.write("<h3>Hello this is javascript</h3>");
+        </script>
+        <h1>WORD COUNTER</h1>
+        <a href="{% url 'about' %}">About</a>
+        <form action="{% url 'counter' %}">
+            <textarea cols="40" rows="6" name="fulltext"></textarea> <!--<context_processors-->
+            </br>
+            <input type="submit" value="count"/>
+            </br>
+            </br>
+            </br>
+        </form>
+        <form action ="{% url 'about' %}">
+            <input type="submit" value="About"/>
+        </form>
+    </body>
+</html>
